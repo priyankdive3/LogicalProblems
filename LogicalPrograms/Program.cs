@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 namespace LogicalProgram
 {
     class Program
@@ -6,9 +6,8 @@ namespace LogicalProgram
         static void Main(string[] args)
         {
             Console.WriteLine("Welcome to logical programming");
-            while (true)
-            {
-                Console.WriteLine("Select program\n 1. fibonacci series\n 2. perfect number\n 3. prime number\n 4. reverse number\n 5. temperature conversion \n6.Stop Watch");
+           
+                Console.WriteLine("Select program\n 1. fibonacci series\n 2. perfect number\n 3. prime number\n 4. reverse number\n 5. temperature conversion \n6.Stop Watch \n7.Monthly Payment. \n8.Vending Machine \n9.Days of Week. \n10.Square root");
                 int option = Convert.ToInt32(Console.ReadLine());
                 switch (option)
                 {
@@ -36,11 +35,25 @@ namespace LogicalProgram
                         Stopwatch watch = new Stopwatch();
                         Stopwatch.Watch();
                         break;
-                    default:
-                        Console.WriteLine("Select correct option");
+                    case 7:
+                        MonthlyPayment.Payment();
                         break;
+                    case 8:
+                        VendingMachine machine = new VendingMachine();
+                        machine.amount();
+                        break;
+                    
+                    case 9:
+                        DaysOfWeek.Days();
+                        break;
+                    case 10:
+                        SquareRoot.Sqrroot();
+                        break;
+                    default:
+                            Console.WriteLine("Select correct option");
+                            break;
                 }
-            }
+            
         }
     }
 }
